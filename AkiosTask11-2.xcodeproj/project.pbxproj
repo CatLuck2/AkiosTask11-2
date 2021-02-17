@@ -14,6 +14,9 @@
 		61973BC025DDDA5200C74BE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61973BBF25DDDA5200C74BE4 /* Assets.xcassets */; };
 		61973BC325DDDA5200C74BE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61973BC125DDDA5200C74BE4 /* LaunchScreen.storyboard */; };
 		61973BCC25DDDB6300C74BE4 /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61973BCB25DDDB6300C74BE4 /* Prefecture.swift */; };
+		61973BD425DDE1D100C74BE4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61973BD225DDE1D100C74BE4 /* TableViewController.swift */; };
+		61973BD525DDE1D100C74BE4 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61973BD325DDE1D100C74BE4 /* TableViewController.xib */; };
+		61973BD825DDE1E300C74BE4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61973BD725DDE1E300C74BE4 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		61973BC225DDDA5200C74BE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61973BC425DDDA5200C74BE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61973BCB25DDDB6300C74BE4 /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
+		61973BD225DDE1D100C74BE4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		61973BD325DDE1D100C74BE4 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		61973BD725DDE1E300C74BE4 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,35 @@
 		61973BB525DDDA4F00C74BE4 /* AkiosTask11-2 */ = {
 			isa = PBXGroup;
 			children = (
+				61973BDB25DDE1FD00C74BE4 /* ViewController */,
+				61973BDA25DDE1F300C74BE4 /* TableViewController */,
 				61973BB625DDDA4F00C74BE4 /* AppDelegate.swift */,
 				61973BB825DDDA4F00C74BE4 /* SceneDelegate.swift */,
-				61973BBA25DDDA4F00C74BE4 /* ViewController.swift */,
+				61973BCB25DDDB6300C74BE4 /* Prefecture.swift */,
 				61973BBC25DDDA4F00C74BE4 /* Main.storyboard */,
 				61973BBF25DDDA5200C74BE4 /* Assets.xcassets */,
 				61973BC125DDDA5200C74BE4 /* LaunchScreen.storyboard */,
 				61973BC425DDDA5200C74BE4 /* Info.plist */,
-				61973BCB25DDDB6300C74BE4 /* Prefecture.swift */,
 			);
 			path = "AkiosTask11-2";
+			sourceTree = "<group>";
+		};
+		61973BDA25DDE1F300C74BE4 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				61973BD225DDE1D100C74BE4 /* TableViewController.swift */,
+				61973BD325DDE1D100C74BE4 /* TableViewController.xib */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		61973BDB25DDE1FD00C74BE4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				61973BBA25DDDA4F00C74BE4 /* ViewController.swift */,
+				61973BD725DDE1E300C74BE4 /* ViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +152,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61973BD825DDE1E300C74BE4 /* ViewController.xib in Resources */,
 				61973BC325DDDA5200C74BE4 /* LaunchScreen.storyboard in Resources */,
 				61973BC025DDDA5200C74BE4 /* Assets.xcassets in Resources */,
 				61973BBE25DDDA4F00C74BE4 /* Main.storyboard in Resources */,
+				61973BD525DDE1D100C74BE4 /* TableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +170,7 @@
 				61973BCC25DDDB6300C74BE4 /* Prefecture.swift in Sources */,
 				61973BBB25DDDA4F00C74BE4 /* ViewController.swift in Sources */,
 				61973BB725DDDA4F00C74BE4 /* AppDelegate.swift in Sources */,
+				61973BD425DDE1D100C74BE4 /* TableViewController.swift in Sources */,
 				61973BB925DDDA4F00C74BE4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
