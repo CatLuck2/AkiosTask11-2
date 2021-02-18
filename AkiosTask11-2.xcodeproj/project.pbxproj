@@ -68,7 +68,6 @@
 				61973BDA25DDE1F300C74BE4 /* TableViewController */,
 				61973BB625DDDA4F00C74BE4 /* AppDelegate.swift */,
 				61973BB825DDDA4F00C74BE4 /* SceneDelegate.swift */,
-				61973BCB25DDDB6300C74BE4 /* Prefecture.swift */,
 				61973BBC25DDDA4F00C74BE4 /* Main.storyboard */,
 				61973BBF25DDDA5200C74BE4 /* Assets.xcassets */,
 				61973BC125DDDA5200C74BE4 /* LaunchScreen.storyboard */,
@@ -80,6 +79,7 @@
 		61973BDA25DDE1F300C74BE4 /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				61973BCB25DDDB6300C74BE4 /* Prefecture.swift */,
 				61973BD225DDE1D100C74BE4 /* TableViewController.swift */,
 				61973BD325DDE1D100C74BE4 /* TableViewController.xib */,
 			);
