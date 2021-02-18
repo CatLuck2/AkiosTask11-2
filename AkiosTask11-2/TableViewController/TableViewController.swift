@@ -10,7 +10,7 @@ import UIKit
 class TableViewController: UITableViewController {
 
     @IBOutlet weak var cancelButton: UIBarButtonItem!
-    private let reuseIdentifier: String = "cell"
+    private let cellIdentifier: String = "cell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
         cell.textLabel?.text = Prefecture.names[indexPath.row]
         return cell
     }
