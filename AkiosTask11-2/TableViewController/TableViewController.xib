@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableViewController" customModule="AkiosTask11_2" customModuleProvider="target">
             <connections>
-                <outlet property="cancelButton" destination="fZT-J0-dUD" id="NvO-Vc-DsV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,7 +24,11 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                 <items>
                     <navigationItem title="都道府県" id="kqu-KP-ppn">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="fZT-J0-dUD"/>
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="fZT-J0-dUD">
+                            <connections>
+                                <action selector="cancelButton:" destination="-1" id="BLe-05-5L0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </items>
             </navigationBar>
