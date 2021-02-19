@@ -14,7 +14,10 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "都道府県を選択"
+        let cancelBarButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(popNavigationController))
+        self.navigationItem.rightBarButtonItem = cancelBarButton
+        self.navigationItem.leftBarButtonItem = nil
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,8 +30,18 @@ class TableViewController: UITableViewController {
         return cell
     }
 
-    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let navVC = self.navigationController else {
+            return
+        }
+        let displayVC = navVC.viewControllers[navVC.viewControllers.count - 2] as! DisplayViewController
+        displayVC.setValueToPrefectureNameLabel(text: Prefecture.names[indexPath.row])
+        self.navigationController?.popViewController(animated: true)
+    }
+
+    @objc
+    private func popNavigationController() {
+        self.navigationController?.popViewController(animated: true)
     }
 
 }

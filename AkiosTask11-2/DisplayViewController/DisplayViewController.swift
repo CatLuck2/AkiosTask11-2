@@ -13,17 +13,17 @@ class DisplayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "都道府県"
     }
 
-    override func viewDidLayoutSubviews() {
-        print(prefectureNameLabel.frame)
+    func setValueToPrefectureNameLabel(text: String) {
+        self.prefectureNameLabel.text = text
     }
     
     @IBAction func presentTableVIewController(_ sender: UIButton) {
         let tableVCXib = TableViewController()
         tableVCXib.modalPresentationStyle = .fullScreen
-        present(tableVCXib, animated: true, completion: nil)
+        self.navigationController?.pushViewController(tableVCXib, animated: true)
     }
     
 }
