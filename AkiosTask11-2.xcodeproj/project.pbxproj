@@ -17,6 +17,7 @@
 		61973BD525DDE1D100C74BE4 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61973BD325DDE1D100C74BE4 /* TableViewController.xib */; };
 		61973BE225DDE8CF00C74BE4 /* DisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61973BE125DDE8CE00C74BE4 /* DisplayView.xib */; };
 		61973BE625DDED2600C74BE4 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61973BE525DDED2600C74BE4 /* DisplayViewController.swift */; };
+		619EC8EA25DF71DF0023BE49 /* NavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619EC8E925DF71DF0023BE49 /* NavigationControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		61973BD325DDE1D100C74BE4 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		61973BE125DDE8CE00C74BE4 /* DisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayView.xib; sourceTree = "<group>"; };
 		61973BE525DDED2600C74BE4 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		619EC8E925DF71DF0023BE49 /* NavigationControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		61973BB525DDDA4F00C74BE4 /* AkiosTask11-2 */ = {
 			isa = PBXGroup;
 			children = (
+				619EC8E925DF71DF0023BE49 /* NavigationControllerProtocol.swift */,
 				61973BDD25DDE89E00C74BE4 /* DisplayViewController */,
 				61973BDA25DDE1F300C74BE4 /* TableViewController */,
 				61973BB625DDDA4F00C74BE4 /* AppDelegate.swift */,
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61973BCC25DDDB6300C74BE4 /* Prefecture.swift in Sources */,
+				619EC8EA25DF71DF0023BE49 /* NavigationControllerProtocol.swift in Sources */,
 				61973BE625DDED2600C74BE4 /* DisplayViewController.swift in Sources */,
 				61973BB725DDDA4F00C74BE4 /* AppDelegate.swift in Sources */,
 				61973BD425DDE1D100C74BE4 /* TableViewController.swift in Sources */,
