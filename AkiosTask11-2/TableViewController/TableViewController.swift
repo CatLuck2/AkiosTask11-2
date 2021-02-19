@@ -7,17 +7,14 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, NavigationControllerProtocol {
 
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     private let cellIdentifier: String = "cell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "都道府県を選択"
-        let cancelBarButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(popNavigationController))
-        self.navigationItem.rightBarButtonItem = cancelBarButton
-        self.navigationItem.leftBarButtonItem = nil
+        setUpNavigationController()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,9 +36,8 @@ class TableViewController: UITableViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
-    @objc
-    private func popNavigationController() {
-        self.navigationController?.popViewController(animated: true)
+    func setUpNavigationController() {
+        self.navigationItem.title = "都道府県を選択"
     }
 
 }
