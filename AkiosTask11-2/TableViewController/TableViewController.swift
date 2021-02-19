@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TableViewController: UITableViewController, NavigationControllerProtocol {
+class TableViewController: UITableViewController {
 
-    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet private weak var cancelButton: UIBarButtonItem!
     private let cellIdentifier: String = "cell"
 
     override func viewDidLoad() {
@@ -37,6 +37,9 @@ class TableViewController: UITableViewController, NavigationControllerProtocol {
     }
 
     func setUpNavigationController() {
+        guard let _ = self.navigationController else {
+            return
+        }
         self.navigationItem.title = "都道府県を選択"
     }
 

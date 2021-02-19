@@ -9,7 +9,7 @@ import UIKit
 
 class DisplayViewController: UIViewController {
 
-    @IBOutlet weak var prefectureNameLabel: UILabel!
+    @IBOutlet private weak var prefectureNameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,9 @@ class DisplayViewController: UIViewController {
     }
 
     func setUpNavigationController() {
+        guard let _ = self.navigationController else {
+            return
+        }
         self.navigationItem.title = "都道府県"
     }
     
