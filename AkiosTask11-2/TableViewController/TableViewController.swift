@@ -36,7 +36,7 @@ class TableViewController: UITableViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
-    func setUpNavigationController() {
+    private func setUpNavigationController() {
         guard let _ = self.navigationController else {
             return
         }

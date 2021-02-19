@@ -20,7 +20,7 @@ class DisplayViewController: UIViewController {
         self.prefectureNameLabel.text = text
     }
 
-    func setUpNavigationController() {
+    private func setUpNavigationController() {
         guard let _ = self.navigationController else {
             return
         }
