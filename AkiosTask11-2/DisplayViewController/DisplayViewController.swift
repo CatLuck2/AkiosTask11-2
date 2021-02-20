@@ -13,18 +13,14 @@ class DisplayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationController()
-    }
-
-    func setValueToPrefectureNameLabel(text: String) {
-        self.prefectureNameLabel.text = text
-    }
-
-    private func setUpNavigationController() {
         guard let _ = self.navigationController else {
             return
         }
         self.navigationItem.title = "都道府県"
+    }
+
+    func setValueToPrefectureNameLabel(text: String) {
+        self.prefectureNameLabel.text = text
     }
     
     @IBAction func presentTableVIewController(_ sender: UIButton) {

@@ -14,7 +14,10 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationController()
+        guard let _ = self.navigationController else {
+            return
+        }
+        self.navigationItem.title = "都道府県を選択"
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,19 +31,12 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let navVC = self.navigationController else {
+        guard let navVC = self.navigationController,
+              let displayVC = navVC.viewControllers[navVC.viewControllers.count - 2] as? DisplayViewController else {
             return
         }
-        let displayVC = navVC.viewControllers[navVC.viewControllers.count - 2] as! DisplayViewController
         displayVC.setValueToPrefectureNameLabel(text: Prefecture.names[indexPath.row])
         self.navigationController?.popViewController(animated: true)
-    }
-
-    private func setUpNavigationController() {
-        guard let _ = self.navigationController else {
-            return
-        }
-        self.navigationItem.title = "都道府県を選択"
     }
 
 }

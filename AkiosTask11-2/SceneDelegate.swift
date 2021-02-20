@@ -19,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene as! UIWindowScene)
         self.window = window
+        // DisplayViewControllerを初期画面に
         let displayVC = DisplayViewController()
+        // NavigationControllerを継承
         navigtionController = UINavigationController(rootViewController: displayVC)
         window.rootViewController = navigtionController
         window.makeKeyAndVisible()
