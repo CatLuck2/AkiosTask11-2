@@ -27,8 +27,9 @@ class DisplayViewController: UIViewController {
     
     @IBAction func presentTableVIewController(_ sender: UIButton) {
         let tableVCXib = TableViewController()
-        tableVCXib.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(tableVCXib, animated: true)
+        let nav = UINavigationController(rootViewController: tableVCXib)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true, completion: nil)
     }
     
 }

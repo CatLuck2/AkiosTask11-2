@@ -21,9 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         // DisplayViewControllerを初期画面に
         let displayVC = DisplayViewController()
-        // NavigationControllerを継承
-        navigtionController = UINavigationController(rootViewController: displayVC)
-        window.rootViewController = navigtionController
+        window.rootViewController = displayVC
         window.makeKeyAndVisible()
     }
 
