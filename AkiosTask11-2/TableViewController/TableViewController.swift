@@ -11,7 +11,7 @@ class TableViewController: UITableViewController {
 
     @IBOutlet private weak var cancelButton: UIBarButtonItem!
     private let cellIdentifier: String = "cell"
-    private let navigationTitle: String = "都道府県を選択"
+    private let navigationTitle: String = "都道府県"
 
     override func viewDidLoad() {
         super.viewDidLoad()

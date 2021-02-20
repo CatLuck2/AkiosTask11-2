@@ -10,17 +10,7 @@ import UIKit
 class DisplayViewController: UIViewController {
 
     @IBOutlet private weak var prefectureNameLabel: UILabel!
-    // ハードコーディングを避け、補完で利用するために、変数で宣言
-    private let navigationTitle: String = "都道府県"
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        guard let _ = self.navigationController else {
-            return
-        }
-        self.navigationItem.title = navigationTitle
-    }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         if let prefectureName = UserDefaults.standard.string(forKey: Prefecture.userDefaultKey) {
