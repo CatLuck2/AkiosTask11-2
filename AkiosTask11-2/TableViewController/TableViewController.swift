@@ -36,6 +36,9 @@ class TableViewController: UITableViewController {
               let displayVC = navVC.viewControllers[navVC.viewControllers.count - 2] as? DisplayViewController else {
             return
         }
+        // XibなのでunwindSegueは使えない
+        // prepareだとDisplayViewControllerの変数を知ってしまう
+        // 関数でDisplayViewControllerを隠蔽
         displayVC.setValueToPrefectureNameLabel(text: Prefecture.names[indexPath.row])
         self.navigationController?.popViewController(animated: true)
     }
