@@ -21,6 +21,13 @@ class DisplayViewController: UIViewController {
         self.navigationItem.title = navigationTitle
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if let prefectureName = UserDefaults.standard.string(forKey: Prefecture.userDefaultKey) {
+            prefectureNameLabel.text = prefectureName
+        }
+    }
+
     func setValueToPrefectureNameLabel(text: String) {
         self.prefectureNameLabel.text = text
     }

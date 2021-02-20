@@ -15,10 +15,7 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let _ = self.navigationController else {
-            return
-        }
-        self.navigationItem.title = navigationTitle
+        setUpNavigationController()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,15 +29,22 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let navVC = self.navigationController,
-              let displayVC = navVC.viewControllers[navVC.viewControllers.count - 2] as? DisplayViewController else {
+        UserDefaults.standard.setValue(Prefecture.names[indexPath.row], forKey: Prefecture.userDefaultKey)
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    private func setUpNavigationController() {
+        guard let _ = self.navigationController else {
             return
         }
-        // XibなのでunwindSegueは使えない
-        // prepareだとDisplayViewControllerの変数を知ってしまう
-        // 関数でDisplayViewControllerを隠蔽
-        displayVC.setValueToPrefectureNameLabel(text: Prefecture.names[indexPath.row])
-        self.navigationController?.popViewController(animated: true)
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
+        self.navigationItem.rightBarButtonItem = cancelButton
+        self.navigationItem.title = navigationTitle
+    }
+
+    @objc
+    private func cancel() {
+        self.dismiss(animated: true, completion: nil)
     }
 
 }
