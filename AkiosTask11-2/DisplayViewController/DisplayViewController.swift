@@ -10,11 +10,16 @@ import UIKit
 class DisplayViewController: UIViewController {
 
     @IBOutlet private weak var prefectureNameLabel: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        UserDefaults.standard.removeObject(forKey: Prefecture.userDefaultKey)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if let prefectureName = UserDefaults.standard.string(forKey: Prefecture.userDefaultKey) {
-            prefectureNameLabel.text = prefectureName
+        if let _ = UserDefaults.standard.string(forKey: Prefecture.userDefaultKey) {
+            prefectureNameLabel.text = UserDefaults.standard.string(forKey: Prefecture.userDefaultKey)
         }
     }
 
