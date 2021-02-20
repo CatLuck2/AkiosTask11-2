@@ -10,13 +10,14 @@ import UIKit
 class DisplayViewController: UIViewController {
 
     @IBOutlet private weak var prefectureNameLabel: UILabel!
+    private let navigationTitle: String = "都道府県"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let _ = self.navigationController else {
             return
         }
-        self.navigationItem.title = "都道府県"
+        self.navigationItem.title = navigationTitle
     }
 
     func setValueToPrefectureNameLabel(text: String) {

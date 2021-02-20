@@ -11,13 +11,14 @@ class TableViewController: UITableViewController {
 
     @IBOutlet private weak var cancelButton: UIBarButtonItem!
     private let cellIdentifier: String = "cell"
+    private let navigationTitle: String = "都道府県を選択"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let _ = self.navigationController else {
             return
         }
-        self.navigationItem.title = "都道府県を選択"
+        self.navigationItem.title = navigationTitle
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
