@@ -11,27 +11,17 @@ class DisplayViewController: UIViewController {
 
     @IBOutlet private weak var prefectureNameLabel: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        UserDefaults.standard.removeObject(forKey: Prefecture.userDefaultKey)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        if let _ = UserDefaults.standard.string(forKey: Prefecture.userDefaultKey) {
-            prefectureNameLabel.text = UserDefaults.standard.string(forKey: Prefecture.userDefaultKey)
-        }
-    }
-
-    func setValueToPrefectureNameLabel(text: String) {
-        self.prefectureNameLabel.text = text
-    }
-    
     @IBAction func presentTableVIewController(_ sender: UIButton) {
-        let tableVCXib = TableViewController()
+        let tableVCXib = TableViewController(
+            didSelectPrefecture: { [weak self] prefecture in
+                self?.prefectureNameLabel.text = prefecture
+                self?.dismiss(animated: true, completion: nil)
+            },
+            didCancel: { [weak self] in
+                self?.dismiss(animated: true, completion: nil)
+            }
+        )
         let nav = UINavigationController(rootViewController: tableVCXib)
-        nav.modalPresentationStyle = .fullScreen
         self.present(nav, animated: true, completion: nil)
     }
-    
 }
